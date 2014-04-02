@@ -1,0 +1,28 @@
+{
+    // Description
+    "name": "Chrome NoFlo test",
+    "description": "Trying stuff out",
+    "version": "0.0.1",
+    "author": "Jesus Fucking Christ",
+
+    "manifest_version": 2,
+
+    "offline_enabled": true,
+
+    // Permissions
+    "sockets": {
+        "tcpServer": {
+            "listen": "0.0.0.0"
+        }
+    },
+    "permissions": [
+        "system.cpu"
+    ],
+
+    // Content
+    "app": {
+        "background": {
+            "scripts": ["background.js"]
+        }
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "noflo-iot",
+  "description": "NoFlo IoT components",
+  "author": {
+    "name": "Lionel Landwerlin",
+    "email": "lionel.g.landwerlin@linux.intel.com"
+  },
+  "repo": "djdeath/noflo-iot",
+  "version": "0.0.1",
+  "keywords": [
+  ],
+  "dependencies": {
+    "jashkenas/underscore": "*",
+    "noflo/noflo": "*",
+
+    "djdeath/noflo-core": "missing-disconnect",
+    "djdeath/noflo-math": "iot",
+    "djdeath/noflo-tween": "*",
+
+    "noflo/fbp": "*",
+    "noflo/noflo-adapters": "*",
+    "noflo/noflo-ajax": "*",
+    "noflo/noflo-css": "*",
+    "noflo/noflo-dom": "*",
+    "noflo/noflo-flow": "*",
+    "noflo/noflo-gestures": "*",
+    "noflo/noflo-groups": "*",
+    "noflo/noflo-image": "*",
+    "noflo/noflo-indexeddb": "*",
+    "noflo/noflo-interaction": "*",
+    "noflo/noflo-localstorage": "*",
+    "noflo/noflo-objects": "*",
+    "noflo/noflo-packets": "*",
+    "noflo/noflo-polymer": "*",
+    "noflo/noflo-routers": "*",
+    "noflo/noflo-runtime-base": "*",
+    "noflo/noflo-strings": "*",
+    "noflo/noflo-websocket": "*"
+  },
+  "scripts": [
+    "index.js"
+  ],
+  "json": [
+    "component.json"
+  ]
+}

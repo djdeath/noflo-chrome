@@ -1,0 +1,34 @@
+{
+  "name": "noflo-iot",
+  "description": "IoT packages for NoFlo",
+  "version": "0.0.1",
+  "author": {
+    "name": "Lionel Landwerlin",
+    "email": "lionel.g.landwerlin@linux.intel.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/djdeath/noflo-iot.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "undefined/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-cli": "~0.1.13",
+    "grunt-component": "~0.1.2",
+    "grunt-component-build": "~0.4.3",
+    "component-json": "git://github.com/CamShaft/component-json.git",
+    "component-coffee": "git://github.com/anthonyshort/component-coffee.git",
+    "grunt-combine": "~0.8.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-clean": "~0.5.0"
+  },
+  "keywords": []
+}
