@@ -1,6 +1,6 @@
 {
-  "name": "noflo-iot",
-  "description": "IoT packages for NoFlo",
+  "name": "noflo-chrome",
+  "description": "Chrome packages for NoFlo",
   "version": "0.0.1",
   "author": {
     "name": "Lionel Landwerlin",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/djdeath/noflo-iot.git"
+    "url": "git://github.com/djdeath/noflo-chrome.git"
   },
   "licenses": [
     {

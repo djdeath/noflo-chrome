@@ -1,11 +1,11 @@
 {
-  "name": "noflo-iot",
+  "name": "noflo-chrome",
   "description": "NoFlo IoT components",
   "author": {
     "name": "Lionel Landwerlin",
     "email": "lionel.g.landwerlin@linux.intel.com"
   },
-  "repo": "djdeath/noflo-iot",
+  "repo": "djdeath/noflo-chrome",
   "version": "0.0.1",
   "keywords": [
   ],
