@@ -48,7 +48,7 @@ module.exports = ->
     # Combine custom version of component-require
     concat:
       'noflo-chrome':
-        src: ['build/noflo-chrome.js', 'aliases.js', 'http.js', 'server.js']
+        src: ['build/noflo-chrome.js', 'aliases.js', 'sha1.js', 'http.js', 'server.js']
         dest: 'app/noflo-chrome.js'
 
     # JavaScript minification (Because it's FAST!!!)

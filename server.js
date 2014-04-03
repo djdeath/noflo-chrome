@@ -78,17 +78,21 @@ var runtime = function (httpServer, options) {
   };
 
   wsServer.addEventListener('request', function (request) {
-    var connection = request.accept('noflo', request.origin);
-    runtime.connections.push(connection);
-    connection.addEventListener('message', function (message) {
-      handleMessage(message, connection);
-    });
-    connection.addEventListener('close', function () {
-      if (runtime.connections.indexOf(connection) === -1) {
-        return;
-      }
-      runtime.connections.splice(runtime.connections.indexOf(connection), 1);
-    });
+      console.log('getting request for : ');
+      console.log(request);
+      var connection = request.accept('noflo', request.origin);
+      runtime.connections.push(connection);
+      connection.addEventListener('message', function (message) {
+          handleMessage(message, connection);
+      });
+      connection.addEventListener('close', function () {
+          if (runtime.connections.indexOf(connection) === -1) {
+              return;
+          }
+          runtime.connections.splice(runtime.connections.indexOf(connection), 1);
+      });
+
+      return true;
   });
 
   return runtime;
@@ -110,16 +114,16 @@ var rt = runtime(server, {
 });
 console.log('runtime operating!');
 
-var NoFlo = require('noflo');
+var NoFlo = require('noflo-chrome');
 var loader = new NoFlo.ComponentLoader('/noflo-chrome');
 console.log('listing components');
 loader.listComponents(function(components) {
+    console.log('components : ');
     console.log(components);
+    console.log('done.');
 });
 
-console.log('listening');
 server.listen(port);// , function () {
 //   console.log('NoFlo runtime listening at ws://' + host + ':' + port);
 //   console.log('Using ' + baseDir + ' for component loading');
 // });
-console.log('listened');
