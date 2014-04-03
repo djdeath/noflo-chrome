@@ -12,10 +12,15 @@
     // Permissions
     "sockets": {
         "tcpServer": {
-            "listen": "0.0.0.0"
+            "listen": "0.0.0.0:5555"
+        },
+        "tcp": {
+            "connect": "*"
         }
     },
     "permissions": [
+        "tcp-connect",
+        "tcp-listen",
         "system.cpu"
     ],
 
