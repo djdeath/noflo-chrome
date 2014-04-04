@@ -17,7 +17,6 @@
     "djdeath/noflo-tween": "*",
 
     "noflo/fbp": "*",
-    "noflo/noflo-adapters": "*",
     "noflo/noflo-ajax": "*",
     "noflo/noflo-css": "*",
     "noflo/noflo-dom": "*",
