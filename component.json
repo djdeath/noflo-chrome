@@ -10,7 +10,6 @@
   "keywords": [
   ],
   "dependencies": {
-    "jashkenas/underscore": "*",
     "noflo/noflo": "*",
 
     "djdeath/noflo-core": "missing-disconnect",
