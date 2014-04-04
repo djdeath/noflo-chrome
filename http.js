@@ -116,8 +116,6 @@ var http = function() {
      * @constructor
      */
     function HttpServer() {
-        console.log('fucking hell');
-
         EventSource.apply(this);
         this.readyState_ = 0;
 
@@ -144,11 +142,6 @@ var http = function() {
                         console.log('failed to listen ' + result);
                         chrome.sockets.tcpServer.close(this.socketId);
                     } else {
-                        // chrome.sockets.tcpServer.onAccept.addListener(function(info) {
-                        //     console.log('accepting connection');
-                        //     console.log(info);
-                        //     this.acceptConnection_(info.clientSocketId);
-                        // }.bind(this))
                         console.log('listening on ' + port);
                         this.readyState_ = 1;
                     }
@@ -157,19 +150,12 @@ var http = function() {
         },
 
         acceptConnection_: function(acceptInfo) {
-            console.log('accepting ' + acceptInfo.clientSocketId);
-            console.log(acceptInfo);
             this.onConnection_(acceptInfo.clientSocketId);
-            console.log('accepted');
         },
 
         onConnection_: function(socketId) {
-            console.log('onConnection1');
-            console.log('onConnection2');
             this.addClientSocket_(socketId);
-            console.log('onConnection3');
             chrome.sockets.tcp.setPaused(socketId, false);
-            console.log('onConnection4');
         },
 
         addClientSocket_: function(socketId) {
@@ -182,9 +168,6 @@ var http = function() {
         },
 
         onReceive_: function(readInfo) {
-            console.log('http receiving');
-            console.log(readInfo);
-
             // Is this a connection we need to listen to?
             var socketId = readInfo.socketId;
             if (!clientSockets[socketId])
@@ -543,8 +526,6 @@ var http = function() {
             var message = '';
             var fragmentedOp = 0;
             var fragmentedMessage = '';
-
-            console.log('read from socket');
 
             var onDataReadError = function (readInfo) {
                 if (this.socketId !== readInfo.socketId)
