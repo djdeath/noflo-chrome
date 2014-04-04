@@ -19,8 +19,6 @@
         }
     },
     "permissions": [
-        "tcp-connect",
-        "tcp-listen",
         "system.cpu"
     ],
 
