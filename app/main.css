@@ -1,0 +1,17 @@
+.square {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+.redSquare {
+    background-color: red;
+}
+
+.greenSquare {
+    background-color: green;
+}
+
+.blueSquare {
+    background-color: blue;
+}
