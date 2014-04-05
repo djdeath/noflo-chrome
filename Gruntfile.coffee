@@ -15,6 +15,13 @@ module.exports = ->
       'noflo-chrome':
         options:
           action: 'install'
+      'noflo-chrome-build':
+        options:
+          action: 'build'
+          args:
+            'out': 'build'
+            'name': 'noflo-chrome'
+            'use': 'component-json,component-coffee'
 
     # Compiled all components into one file
     componentbuild:
@@ -68,7 +75,7 @@ module.exports = ->
   @loadNpmTasks 'grunt-contrib-clean'
 
   # Our local tasks
-  @registerTask 'build-components', ['component:noflo-chrome', 'componentbuild:noflo-chrome', 'combine:noflo-chrome', 'uglify:noflo-chrome']
+  @registerTask 'build-components', ['component:noflo-chrome', 'component:noflo-chrome-build', 'combine:noflo-chrome', 'uglify:noflo-chrome']
   @registerTask 'build', ['build-components', 'concat:noflo-chrome']
 
   @registerTask 'nuke', ['clean:noflo-chrome-components', 'clean:noflo-chrome']

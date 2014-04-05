@@ -22,7 +22,6 @@
     "grunt": "~0.4.1",
     "grunt-cli": "~0.1.13",
     "grunt-component": "~0.1.2",
-    "grunt-component-build": "~0.4.3",
     "component-json": "git://github.com/CamShaft/component-json.git",
     "component-coffee": "git://github.com/anthonyshort/component-coffee.git",
     "grunt-combine": "~0.8.3",
