@@ -19,7 +19,6 @@ WebSocketRuntime.prototype.send = function (protocol, topic, payload, context) {
     if (!context.connection)
         return;
 
-
     context.connection.send(JSON.stringify({
         protocol: protocol,
         command: topic,
@@ -35,6 +34,7 @@ WebSocketRuntime.prototype.stopCapture = function () {
 
 var runtime = function (httpServer, options) {
     var wsServer = new http.WebSocketServer(httpServer);
+    var context = {};
 
     var runtime = new WebSocketRuntime(options);
     var handleMessage = function (message, connection) {
@@ -43,9 +43,8 @@ var runtime = function (httpServer, options) {
         } catch (e) {
             return;
         }
-        runtime.receive(contents.protocol, contents.command, contents.payload, {
-            connection: connection
-        });
+        context.connection = connection;
+        runtime.receive(contents.protocol, contents.command, contents.payload, context);
     };
 
     wsServer.addEventListener('request', function (request) {
@@ -55,11 +54,16 @@ var runtime = function (httpServer, options) {
             handleMessage(message, connection);
         });
         connection.addEventListener('close', function () {
+            console.log('disconnected');
             if (runtime.connections.indexOf(connection) === -1) {
                 return;
             }
+            if (context.connection == connection)
+                context.connection = null;
             runtime.connections.splice(runtime.connections.indexOf(connection), 1);
         });
+
+        console.log('connected');
 
         return true;
     });
