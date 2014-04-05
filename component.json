@@ -14,11 +14,13 @@
 
     "djdeath/noflo-core": "missing-disconnect",
     "djdeath/noflo-math": "iot",
+    "djdeath/noflo-css": "get-property",
+    "djdeath/noflo-strings": "parse-number",
     "djdeath/noflo-tween": "*",
+    "djdeath/noflo-hammer": "*",
 
     "noflo/fbp": "*",
     "noflo/noflo-ajax": "*",
-    "noflo/noflo-css": "*",
     "noflo/noflo-dom": "*",
     "noflo/noflo-flow": "*",
     "noflo/noflo-gestures": "*",
@@ -32,7 +34,6 @@
     "noflo/noflo-polymer": "*",
     "noflo/noflo-routers": "*",
     "noflo/noflo-runtime-base": "*",
-    "noflo/noflo-strings": "*",
     "noflo/noflo-websocket": "*"
   },
   "scripts": [
