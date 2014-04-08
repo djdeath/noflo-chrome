@@ -1,7 +1,21 @@
-.square {
-    position: absolute;
-    width: 200px;
+body {
+    margin: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+#main {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 300%;
     height: 200px;
+}
+
+.square {
+    display: flex;
+    width: 100%;
 }
 
 .redSquare {
