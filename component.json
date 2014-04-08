@@ -14,7 +14,7 @@
 
     "djdeath/noflo-core": "missing-disconnect",
     "djdeath/noflo-math": "iot",
-    "djdeath/noflo-css": "get-property",
+    "djdeath/noflo-css": "chrome",
     "djdeath/noflo-strings": "parse-number",
     "djdeath/noflo-tween": "*",
     "djdeath/noflo-hammer": "*",
